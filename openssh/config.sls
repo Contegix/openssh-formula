@@ -12,7 +12,6 @@ sshd_config:
     - user: {{ openssh.sshd_config_user }}
     - group: {{ openssh.sshd_config_group }}
     - mode: {{ openssh.sshd_config_mode }}
-    - check_cmd: {{ openssh.sshd_binary }} -t -f
     {%- if openssh.sshd_config_backup  %}
     - backup: minion
     {%- endif %}
